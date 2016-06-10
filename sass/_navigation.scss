@@ -1,0 +1,15 @@
+ul.menu {
+	margin: 0;
+	padding: 0;
+	li {
+		display: inline;
+		margin-right: 10px;
+		text-transform: uppercase;
+		
+		a {
+			padding: 10px;
+			color: white;
+			font-family:$Montserrat;
+		}
+	}
+}

@@ -1,0 +1,4 @@
+responsive
+parallex
+sidebar
+github links
