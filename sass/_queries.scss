@@ -1,0 +1,331 @@
+@media all and (max-width:1260px){
+
+	.container{
+		width:90%;
+	}
+
+	section.about {
+
+		.about-tag-line{
+			display:none;
+		}
+
+		.about-title{
+			background:$bg-grey;
+			z-index:1;
+		}
+
+		.about-bio{
+			left: 50px;
+			top: 590px;
+		}
+	}
+
+	section.skills {
+
+		.skill{
+			width:120px;
+		}
+
+		.learn-skills{
+			display:none;
+		}
+
+		.skills-wrapper{
+			justify-content:center;
+		}
+
+		svg.bottom-skills{
+			margin-top:100px;
+		}
+	}
+
+	section.portfolio{
+
+		.project a.figure-link{
+			width:450px;
+		}
+	}
+}
+
+@media all and (max-width:960px) {
+
+	header{
+
+		h1{
+			@include font-size(50);
+		}
+
+		.hamburger{
+			display:block;
+		}
+
+		.nav{
+			position:fixed;
+			z-index:2;
+			top: 0px;
+			right: 0px;
+		}
+
+		.main-nav ul{
+			display:none;
+
+			li{
+				margin-bottom:5px;
+			}
+		}
+
+		.menu.show{
+			display:flex;
+			flex-direction:column;
+			position:absolute;
+			right: 0;
+			bottom: -225px;
+			text-align:right;
+		}
+
+		.nav{
+			display:flex;
+			flex-direction:column;
+			justify-content:space-between;
+		}
+	}
+
+	section.about {
+	 
+		.about-bio{
+			left: 0;
+		}
+	}
+
+	section.skills {
+
+		.skill{
+			margin:5px;
+		}
+	}
+
+	section.portfolio {
+
+		.project{
+			flex-direction:column;
+			align-items:center;
+
+			aside.project-info{
+				width:80%;
+			}
+
+			a.figure-link{
+				width:80%;
+
+				figure{
+					width:400px;
+				}
+			}
+		}
+
+		.project:nth-child(odd){
+			flex-direction:column;
+
+			a.figure-link{
+				display:flex;
+				justify-content:flex-end;	
+			}
+		}
+
+		article:first-of-type:before,
+		article:nth-of-type(2):before,
+		article:nth-of-type(3):before,
+		article:nth-of-type(4):before{
+			top: 20px;
+		}
+	}
+
+	section.contact {
+
+		#wpcf7-f31-o1{
+			width:100%;
+		}
+
+		.contact-wrapper{
+			flex-direction:column-reverse;
+			align-items:center;
+		}
+
+		.contact-individual{
+			width:100%;
+			padding:20px 0;
+
+			a,
+			h6,
+			i{
+				display:inline-block;
+			}
+
+			a{
+				margin:0 20px;
+				margin-bottom:20px;
+			}
+		}
+
+		.sm-wrapper{
+			flex-direction:row;
+			flex-wrap:wrap;
+			justify-content:center;
+		}
+	}
+}
+
+@media all and (max-width:873px) {
+
+	section.about{
+		padding-top:100px;
+		height:1150px;
+
+		.container{
+			display:flex;
+			flex-direction:column;
+			align-items:center;
+		}
+
+		.about-title{
+			position:static;
+		}
+
+		.about-img{
+			display:none;
+		}
+
+		.about-bio{
+			width:100%;
+			position:static;
+			margin-top:-40px;
+			z-index:0;
+		}
+	}
+}
+
+@media all and (max-width:680px) {
+
+	header{
+
+		h1{
+			@include font-size(30);
+		}
+
+		.hero-text h6.hero-tag-line{
+			margin-bottom:40px;
+		}
+	}
+
+	section.about{
+		height:auto;
+		padding-bottom:100px;
+
+		.about-title{
+			width:100%;
+		}
+
+		.about-bio{
+			height:auto;
+			padding-top:60px;
+			padding-bottom:20px;
+		}
+	}
+
+	section.skills {
+
+		.skill{
+			width:90px;
+			padding:10px;
+
+			i{
+				@include font-size(18);
+			}
+		}
+
+		.skills-wrapper:before{
+			left: 5px;
+			@include font-size(12);
+		}
+	}
+}
+
+@media all and (max-width:540px) {
+
+	section.portfolio{
+
+		.project{
+
+			a.figure-link{
+				width:100%;
+			}
+
+			a.figure-link figure{
+				width:100%;
+				background-size:cover;
+			}
+
+			aside.project-info{
+				width:100%;
+			}
+		}
+
+		article:first-of-type:before,
+		article:nth-of-type(3):before{
+			top: -20px;
+			left: 30px;
+			padding:0 20px;
+		}
+
+		article:nth-of-type(2):before,
+		article:nth-of-type(4):before{
+			top: -20px;
+			right: 30px;
+			padding:0 20px;
+		}
+
+		article:first-of-type,
+		.project:nth-child(even),
+		.project:nth-child(odd){
+			border:none;
+			border-top:2px solid #202020;
+		}
+
+		svg{
+			margin-top:60px;
+		}
+	}
+
+	section.contact {
+
+		#wpcf7-f31-o1 {
+
+			p:first-of-type,
+			p:nth-of-type(2){
+				width:100%;
+				margin-left:0px;
+				margin-right:0px;
+			}
+		}
+
+		.sm-wrapper{
+			justify-content:flex-start;
+
+			h6{
+				display:none;
+			}
+		}
+
+		svg{
+			margin-top:30px;
+		}
+	}
+}
+
+@media all and (max-width:460px) {
+
+	section.portfolio .project a.figure-link figure{
+		height:auto;
+	}
+}

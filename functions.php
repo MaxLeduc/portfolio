@@ -48,7 +48,7 @@ We'll let WordPress add them to our templates automatically instead
 of writing our own link tags in the header. */
 
 function hackeryou_styles(){
-	wp_enqueue_style('style', get_stylesheet_uri() );
+	// wp_enqueue_style('style', get_stylesheet_uri() );
 
 	wp_enqueue_style('fontawesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css');
 
@@ -77,6 +77,14 @@ function hackeryou_scripts() {
   );
 
   wp_enqueue_script(
+    'scrollReveal', //handle
+    'https://cdn.jsdelivr.net/scrollreveal.js/3.1.4/scrollreveal.min.js',
+    array('jquery', 'plugins'),
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
     'plugins', //handle
     get_template_directory_uri() . '/js/plugins.js', //source
     false, //dependencies
@@ -88,6 +96,22 @@ function hackeryou_scripts() {
     'scripts', //handle
     get_template_directory_uri() . '/js/main.min.js', //source
     array( 'jquery', 'plugins' ), //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'skrollr-stylesheets', //handle
+    get_template_directory_uri() . '/js/skrollr.stylesheets.min.js', //source
+    false, //dependencies
+    null, // version number
+    true //load in footer
+  );
+
+  wp_enqueue_script(
+    'skrollr', //handle
+    get_template_directory_uri() . '/js/skrollr.min.js', //source
+    false, //dependencies
     null, // version number
     true //load in footer
   );

@@ -7,6 +7,7 @@
 	<title><?php  wp_title('|', true, 'right'); ?></title>
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 	<!-- stylesheets should be enqueued in functions.php -->
+	<link rel="stylesheet" id="style-css" href="<?php bloginfo('template_url') ?>/style.css?ver=4.5.2" type="text/css" media="all" data-skrollr-stylesheet />
 	<?php wp_head(); ?>
 </head>
 
@@ -19,10 +20,17 @@
 			<a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
 				<h3 id='logo'><?php the_field('logo','option') ?></h3>
 			</a>
-			<?php wp_nav_menu( array(
-				'container' => false,
-				'theme_location' => 'primary'
-			)); ?>
+			<div class="nav">
+				<?php wp_nav_menu( array(
+					'container' => false,
+					'theme_location' => 'primary'
+				)); ?>
+				<div class="hamburger">
+					<span class="top-bun"></span>
+				 	<span class="patty"></span>
+					<span class="bottom-bun"></span>
+				</div>
+			</div>
 		</div>
 		<div class="hero-text">
 			<h1><?php the_field('name_of','option') ?></h1>

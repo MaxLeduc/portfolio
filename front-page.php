@@ -119,7 +119,7 @@
 			?>
 			<?php $image = get_sub_field('image'); ?>
 			<article class="project">
-				<a href="<?php the_sub_field('project_url')?>" target="_blank" class="figure-link"><figure style="background:url('<?php echo $image['url']?>'); background-repeat:no-repeat; background-position:center;">
+				<a href="<?php the_sub_field('project_url')?>" target="_blank" class="figure-link"><figure><img src="<?php echo $image['url']?>"/>
 				</figure></a>
 				<aside class='project-info clearfix'>
 					<h6 class='skills-involved'><?php the_sub_field('skills_involved')?></h6>

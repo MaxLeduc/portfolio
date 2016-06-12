@@ -103,4 +103,68 @@ header{
 	  background: transparent;
 	  fill:$bg-grey;
 	}
+
+	//hamburger menu
+
+	.hamburger{
+		height:27px;
+		width:30px;
+		position:relative;
+		display:none;
+		font-size:35px;
+		margin-right:20px;
+		top: 75px;
+
+		.top-bun{
+		  position:absolute;
+		  width:26px;
+		  height:5px;
+		  top:2px;
+		  left:2px;
+		  margin:0 auto;
+		  background:$red;
+		  border-radius:2px;
+		  transition:all 0.5s;
+		}
+
+		.patty{
+		  position:absolute;
+		  width:26px;
+		  height:5px;
+		  top:11px;
+		  left:2px;
+		  margin:0 auto;
+		  background:$red;
+		  border-radius:2px;
+		}
+
+		.bottom-bun{
+		  position:absolute;
+		  width:26px;
+		  height:5px;
+		  top:20px;
+		  left:2px;
+		  margin:0 auto;
+		  background:$red;
+		  border-radius:2px;
+		  transition:all 0.5s;
+		}
+	}
+
+	.close{
+
+		span.top-bun{
+		  transform:rotate(45deg);
+		  top:12px;
+		}
+
+		span.patty{
+		  display:none;
+		}
+
+		span.bottom-bun{
+		  transform:rotate(-45deg);
+		  top:12px;
+		}
+	}
 }
